@@ -32,21 +32,21 @@ def get_recommendations(intent: ProductQueryIntent, products: list) -> list:
     return filtered_results
 
 def run_ai_search(query: str):
-    print(f"\n👉 User Query: '{query}'")
+    print(f"\n👤 Customer Query: '{query}'")
     
     parsed_intent = extract_intent(query)
     print(f"🔍 AI Parsed Intent:")
-    print(f"   - Intent Type: {parsed_intent.intent_type}")
-    print(f"   - Category: {parsed_intent.category}")
-    print(f"   - Preferred Color: {parsed_intent.preferred_color}")
-    print(f"   - Preferred Size: {parsed_intent.preferred_size}")
-    print(f"   - Max Price Limit: {parsed_intent.max_price}")
-    print(f"   - Product Type: {parsed_intent.product_type}")
+    print(f"   1. Intent Type: {parsed_intent.intent_type}")
+    print(f"   2. Category: {parsed_intent.category}")
+    print(f"   3. Preferred Color: {parsed_intent.preferred_color}")
+    print(f"   4. Preferred Size: {parsed_intent.preferred_size}")
+    print(f"   5. Max Price Limit: {parsed_intent.max_price}")
+    print(f"   6. Product Type: {parsed_intent.product_type}")
     
 
     matches = get_recommendations(parsed_intent, MOCK_PRODUCTS)
     
-    print(f"🛍️ Recommendations Found ({len(matches)}):")
+    print(f" Recommendations Found ({len(matches)}):")
     if matches:
         for idx, item in enumerate(matches, 1):
             print(f"   {idx}. {item['name']} | Price: {item['price']} | Sizes: {item['sizes']} | Colors: {item['colors']}")
