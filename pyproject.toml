@@ -1,0 +1,13 @@
+[project]
+name = "fashionhub-sales-assistant-ai"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "langchain>=1.3.13",
+    "langchain-google-genai>=4.2.7",
+    "langchain-openai>=1.3.5",
+    "pydantic>=2.13.4",
+    "python-dotenv>=1.2.2",
+]
