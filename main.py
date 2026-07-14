@@ -24,7 +24,6 @@ def get_recommendations(intent: ProductQueryIntent, products: list) -> list:
                 
         # 4. Price Filter 
         if intent.max_price:
-            # cleaning price string to float for comparison
             if product["price"] > intent.max_price:
                 continue
                 

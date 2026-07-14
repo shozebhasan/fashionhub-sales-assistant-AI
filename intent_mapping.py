@@ -31,7 +31,7 @@ class ProductQueryIntent(BaseModel):
     description="Extract the product type such as T-Shirt, Shirt, Hoodie, Jacket, Jeans, Trouser, Dress, Kurta, Polo, Sweatshirt, Shorts, etc."
    )
 
-# Using GPT-4o-mini model for outputs.
+# Using Gemini 2.5 flash model for outputs.
 llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0)
 
 structured_llm = llm.with_structured_output(ProductQueryIntent)
